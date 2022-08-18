@@ -1,0 +1,5 @@
+LaCasitaDelArbolApp/settings/local.py
+NO_TOUCH.txt
+.idea
+__pycache__
+db.sqlite3

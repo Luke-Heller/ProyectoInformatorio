@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description"
+          content="La Casita del Árbol es un merendero y comedor, conformado por grupo de personas reunidos para un bien común:ayudar a niños y jóvenes. Garantizandoles un plato de comida cada día así como también apoyo escolar y talleres de oficios. Con el sueño de algún día poder convertir la Casita en un refugio.">
+    <meta name="author" content="Grupo Once">
+    <title>La Casita del Árbol</title>
+    <link rel="icon" sizes="57x57" href="assets/icono/apple-icon-57x57.png">
+    <link rel="icon" sizes="60x60" href="assets/icono/apple-icon-60x60.png">
+    <link rel="icon" sizes="72x72" href="assets/icono/apple-icon-72x72.png">
+    <link rel="icon" sizes="76x76" href="assets/icono/apple-icon-76x76.png">
+    <link rel="icon" sizes="114x114" href="assets/icono/apple-icon-114x114.png">
+    <link rel="icon" sizes="120x120" href="assets/icono/apple-icon-120x120.png">
+    <link rel="icon" sizes="144x144" href="assets/icono/apple-icon-144x144.png">
+    <link rel="icon" sizes="152x152" href="assets/icono/apple-icon-152x152.png">
+    <link rel="icon" sizes="180x180" href="assets/icono/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icono/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icono/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icono/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icono/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/a537b4a62c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--<link rel  ="stylesheet" href="css/style.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/styles.css" %}" rel="stylesheet">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    </symbol>
+
+    <symbol id="whatsapp" viewBox="0 0 21.5 21.5">
+        <path d="M19.1,4.9C17.2,3,14.7,2,12,2C6.5,2,2,6.5,2,12c0,1.8,0.5,3.5,1.3,5L2,22l5.2-1.2C8.7,21.6,10.3,22,12,22l0,0	c5.5,0,10-4.5,10-10C22,9.3,21,6.8,19.1,4.9z M12,20c-1.3,0-2.7-0.3-3.8-1l-0.7-0.4l-0.7,0.2l-2,0.5l0.5-1.8l0.2-0.8L5.1,16	C4.4,14.8,4,13.4,4,12c0-4.4,3.6-8,8-8c2.1,0,4.1,0.8,5.7,2.3C19.2,7.9,20,9.9,20,12C20,16.4,16.4,20,12,20z"></path>
+        <path d="M19.1,4.9C17.2,3,14.7,2,12,2C6.5,2,2,6.5,2,12c0,1.8,0.5,3.5,1.3,5L2,22l5.2-1.2C8.7,21.6,10.3,22,12,22l0,0	c5.5,0,10-4.5,10-10C22,9.3,21,6.8,19.1,4.9z"
+              opacity=".3"></path>
+        <path d="M16.9,15.6c-0.2,0.6-1.2,1.1-1.7,1.2c-0.5,0-0.9,0.2-3-0.6c-2.5-1-4.1-3.6-4.3-3.8c-0.1-0.2-1-1.4-1-2.6S7.5,8,7.8,7.7	C8,7.4,8.3,7.4,8.5,7.4s0.3,0,0.5,0s0.4,0,0.6,0.4c0.2,0.5,0.7,1.7,0.8,1.9s0.1,0.3,0,0.4s-0.1,0.3-0.2,0.4	c-0.1,0.1-0.3,0.3-0.4,0.4c-0.1,0.1-0.3,0.3-0.1,0.5c0.1,0.3,0.6,1.1,1.4,1.7c1,0.9,1.8,1.1,2,1.2c0.3,0.1,0.4,0.1,0.5-0.1	c0.1-0.2,0.6-0.7,0.8-1s0.3-0.2,0.6-0.1s1.5,0.7,1.7,0.8c0.3,0.1,0.4,0.2,0.5,0.3C17.1,14.5,17.1,15,16.9,15.6z"></path>
+    </symbol>
+
+    <symbol id="gmaps" viewBox="0 0 22 22 ">
+        <path d="M 18 1 C 16.373466 1 14.941036 1.793645 14.027344 3 L 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 19.178 3.0312188 19.346719 3.0742188 19.511719 L 13.650391 8.9355469 C 13.921917 9.5969385 14.236041 10.22471 14.542969 10.810547 C 14.550361 10.824662 14.55512 10.837469 14.5625 10.851562 L 13.414062 12 L 20.925781 19.511719 C 20.968781 19.346719 21 19.178 21 19 L 21 11.660156 C 21.158385 11.323154 21.328472 10.980602 21.509766 10.626953 C 22.208766 9.2619531 23 7.714 23 6 C 23 3.243 20.757 1 18 1 z M 17.972656 3.0292969 C 19.629656 3.0292969 20.972656 4.3722969 20.972656 6.0292969 C 20.971656 8.5252969 18.376953 11.030062 18.376953 13.664062 C 18.376953 13.870062 18.176703 14.023437 17.970703 14.023438 C 17.764703 14.023438 17.595703 13.840766 17.595703 13.634766 C 17.595703 11.000766 14.972656 8.7552969 14.972656 6.0292969 C 14.972656 4.3722969 16.315656 3.0292969 17.972656 3.0292969 z M 8.0019531 5 C 8.7799531 5 9.4874844 5.29525 10.021484 5.78125 L 9.1777344 6.6269531 C 8.8607344 6.3559531 8.4509531 6.1894531 8.0019531 6.1894531 C 7.0019531 6.1894531 6.1914063 7 6.1914062 8 C 6.1914062 8.999 7.0019531 9.8105469 8.0019531 9.8105469 C 8.8409531 9.8105469 9.4217656 9.3121875 9.6347656 8.6171875 L 8.0019531 8.6171875 L 8.0019531 7.4726562 L 10.828125 7.4765625 C 11.074125 8.6455625 10.519953 11 8.0019531 11 C 6.3439531 11 5 9.657 5 8 C 5 6.343 6.3439531 5 8.0019531 5 z M 18 5 A 1 1 0 0 0 17 6 A 1 1 0 0 0 18 7 A 1 1 0 0 0 19 6 A 1 1 0 0 0 18 5 z M 12 13.414062 L 4.4882812 20.925781 C 4.6532812 20.968781 4.822 21 5 21 L 19 21 C 19.178 21 19.346719 20.968781 19.511719 20.925781 L 12 13.414062 z"></path>
+    </symbol>
+
+    <symbol id="gmailContacto" viewBox="0 0 22 22">
+        <path d="M19,4l-7,4.99L5,4C3.343,4,2,5.343,2,7v10c0,1.657,1.343,3,3,3V7.707l7,4.959l7-4.959V20c1.657,0,3-1.343,3-3V7	C22,5.343,20.657,4,19,4z"></path>
+    </symbol>
+
+    <symbol id="insta-lcda" viewBox="0 0 22 22">
+        <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+    </symbol>
+</svg>
+
+
+<main>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'images/logoONG.png' %}" width="100em" alt="Logo ONG">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Sobre Nuestra ONG
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Noticias</a></li>
+                            <li><a class="dropdown-item" href="#">Quienes Somos</a></li>
+                            <li><a class="dropdown-item" href="#">Nuestros Eventos</a></li>
+                            <li><a class="dropdown-item" href="#">Como Ayudar</a></li>
+                            {#                            <li>#}
+                            {#                                <hr class="dropdown-divider">#}
+                            {#                            </li>#}
+                            {#                            <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+                        </ul>
+                    </li>
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link active btn btn-warning" aria-current="page" href="#">Mi Cuenta</a>#}
+{#                    </li>#}
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link active btn btn-outline-success " aria-current="page" href="#">DONAR</a>#}
+{#                    </li>#}
+
+                    {#                    <li class="nav-item">#}
+                    {#                        <a class="nav-link disabled">Disabled</a>#}
+                    {#                    </li>#}
+                </ul>
+                {#                <form class="d-flex" role="search">#}
+                {#                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+                {#                    <button class="btn btn-outline-success" type="submit">Search</button>#}
+                {#                </form>#}
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-warning" type="button">Mi Cuenta</button>
+                    <button class="btn btn-success" type="button">Donar</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    {#    <img src="assets/images/inicio.webp" alt="Imagen de portada"><br>#}
+    {#    <img class="img-icono" src="/assets/svg/niño.svg" alt="logo manos y niño">#}
+    {#    <p>Ayudamos a más de 100 niños.</p>#}
+    {#    <img class="img-icono" src="/assets/svg/casa.svg" alt="logo casita y árbol">#}
+    {#    <p>Merendero</p>-->#}
+    {#    <img class="img-icono" src="/assets/svg/corazón.svg" alt="logo mano y corazón">#}
+    {#    <p>Más de 5 años al servicio de la comunidad</p>#}
+</main>
+
+{#<footer class="footer">#}
+{#    <address>Barrio 29 de Agosto, Resistencia, Chaco</address>#}
+{#    <p>ernestoayala444@gmail.com</p>#}
+{#    <p>+54 9 362 408-2451</p>#}
+{##}
+
+{##}
+{#</footer>#}
+
+<div class="container fixed-bottom">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1 ">
+                <img src="{% static 'images/logoONG.png' %}" style="width: 5em" alt="logo_casita_Del_arbol">
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Grupo 11 Informatorio</span>
+        </div>
+
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <p>Contacto -></p>
+            <li class="ms-3"><a class="text-muted" href="wa.me/+5493624082451">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#whatsapp"/>
+                </svg>
+            </a></li>
+            <li class="ms-3"><a class="text-muted" href="#">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#gmaps"/>
+                </svg>
+            </a></li>
+            <li class="ms-3"><a class="text-muted"
+                                href="https://www.facebook.com/La-Casita-Del-Arbol-Ayala-490299887977840/"
+                                target="_blank">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#facebook"/>
+                </svg>
+            </a></li>
+
+            <li class="ms-3"><a class="text-muted"
+                                href="ernestoayala444@gmail.com"
+                                target="_blank">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#gmailContacto"/>
+                </svg>
+            </a></li>
+
+            <li class="ms-3"><a class="text-muted"
+                                href="https://instagram.com/lacasitadelarbol_ernesto?igshid=YmMyMTA2M2Y="
+                                target="_blank">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#insta-lcda"/>
+                </svg>
+            </a></li>
+        </ul>
+    </footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"#}
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

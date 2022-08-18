@@ -1,0 +1,1 @@
+Requirement already satisfied: pip in d:\a datos y juegos hdd\curso informatorio\ejercicios\lacasitadelarbolapp\venv\lib\site-packages (21.3.1)

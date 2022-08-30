@@ -36,7 +36,7 @@ LLAMA AL PATH DEFINIDO POR EL S.O. Y BUSCA CUAL ES ESA RUTA, O DONDE SE ENCUENTR
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-xd359-pa1b_w-8+k#48_8##clz$+p6fx9a7g@l8mz_tz--9zwv'
 """
 ESTA SECRET KEY ES UNICA PARA CADA PROYECTO, ES DECIR QUE UNO DEBE CREAR EL PROYECTO Y LAS OTRAS PERSONAS LO CLONEN.
 POR QUE CADA VEZ QUE EJECUTEMOS EL COMANDO START PROYECT ESTA SECRET KEY ES DISTINTA PARA TODOS LOS CASOS.
@@ -114,16 +114,20 @@ toda la parte de gestion de contenido, autenticacion, panel de control, control 
 
 ROOT_URLCONF = 'LaCasitaDelArbolApp.urls'
 """
-Contiene cual es la direccion (PATH) donde esta mi archivo "urls.py". Si o si tiene que estar correcta porque cada vez que hagamos click en un enlace
-django viene al archivo settings ejecutado en el manage y busca cual es mi archivo de urls para saber cual es la vista o el template que tiene que cargar.
+Contiene cual es la direccion (PATH) donde esta mi archivo "urls.py.py". Si o si tiene que estar correcta porque cada vez que hagamos click en un enlace
+django viene al archivo settings ejecutado en el manage y busca cual es mi archivo de urls.py para saber cual es la vista o el template que tiene que cargar.
 
 
 """
 
+TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'templates');
+TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'templates/noticias');
+TEMPLATE_EVENTOS = os.path.join(os.path.dirname(BASE_DIR),'templates/eventos');
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'templates')]
+        'DIRS': [TEMPLATE_DIR, TEMPLATE_NOTICIAS, TEMPLATE_EVENTOS]
         ,
         'APP_DIRS': True,
         'OPTIONS': {

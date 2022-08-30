@@ -24,7 +24,7 @@ class Noticia(models.Model): #Tabla noticia
     autor = models.ForeignKey('auth.User', on_delete=models.CASCADE);
     titulo = models.CharField("Titulo",max_length=100);
     contenido = models.TextField();
-    img = models.ImageField(null=True, blank=True, upload_to="media/images/noticias", help_text="Seleccione una imagen para mostrar");
+    img = models.ImageField(null=True, blank=True, upload_to="images/noticias", help_text="Seleccione una imagen para mostrar");
     creado = models.DateTimeField(default=timezone.now);
     modificado = models.DateTimeField(auto_now=True);
     publicado = models.DateTimeField("Fecha de Publicacion",blank=True,null=True);

@@ -36,6 +36,9 @@ class Noticia(models.Model): #Tabla noticia
     def __str__(self):
         return self.titulo;
 
+    def categoria_noticia(self):
+        return self.categoria.get().__str__();
+
     class Meta:
         verbose_name = "Noticia";
         verbose_name_plural = "Noticias"

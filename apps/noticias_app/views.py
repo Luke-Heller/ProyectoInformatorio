@@ -4,7 +4,7 @@ from django.views import View
 from django.views.generic import DetailView, ListView, TemplateView
 # from apps.noticias_app.models import *;
 # Create your views here.
-from apps.noticias_app.models import Noticia
+from apps.noticias_app.models import Noticia, Categoria
 
 
 # def index(request): #Request lo recibe siempre
@@ -27,7 +27,7 @@ class Inicio (TemplateView):
 
 class ListadoNoticia(ListView):
     model = Noticia;
-    template_name = "noticias/noticiaPruebaBS.html";
+    template_name = "noticias/noticias.html";
     queryset = Noticia.objects.all();
     context_object_name = "noticias";
     paginate_by = 10;
@@ -36,3 +36,11 @@ class DetalleNoticia(DetailView):
     model = Noticia;
     template_name = "noticias/noticia-detalle.html";
     context_object_name = "noticia";
+
+    # def get_context_data(self, **kwargs):
+    #     context = super(DetalleNoticia, self).get_context_data(**kwargs);
+    #     categorias = Categoria.objects.all();
+    #
+    #     context["categoriasxd"] = categorias;
+    #
+    #     return context;
